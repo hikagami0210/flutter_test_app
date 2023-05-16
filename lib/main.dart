@@ -61,18 +61,21 @@ class MyHomePage extends StatelessWidget {
   }
 
   Widget pageButton(String title, route , context){
-    return SizedBox(
-        width: double.infinity,
-        child: ElevatedButton(
-            onPressed: () async {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => route,
-                  ));
-            },
-            child: (Text(title,
-              style: const TextStyle(fontSize: 20),
-            ))));
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
+      child: SizedBox(
+          width: double.infinity,
+          child: ElevatedButton(
+              onPressed: () async {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => route,
+                    ));
+              },
+              child: (Text(title,
+                style: const TextStyle(fontSize: 20),
+              )))),
+    );
   }
 }
